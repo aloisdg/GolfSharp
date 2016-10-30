@@ -6,15 +6,23 @@ using s = System.String;
 using c = System.Char;
 using System.Collections.Generic;
 using System.Linq;
-
+using static System.Math;
+using System.IO;
+using System.Web;
 namespace GolfSharp
 {
 	static class MainClass
 	{
+		
 		public static void Main(string[] args)
 		{
 			/* put your code here */
+
 		}
+		/* constant variables */
+		public static s z = "abcdefghijklmnop";
+		public static s Z = "ABCDEFGHIJKLMNOP";
+
 
 		/* String functions */
 		public static String t(this object input) => input.ToString();
@@ -31,16 +39,13 @@ namespace GolfSharp
 		public static IEnumerable<int> r(int start, int count) => Enumerable.Range(start, count);
 		public static void f<TSource>(IEnumerable<TSource> input, Action<TSource> predicate) => input.l().ForEach(predicate);
 
+
 		/* Output functions */
 		public static void c<T>(T input) => Console.WriteLine(input);
 		public static void C<T>(IEnumerable<T> input) => Console.WriteLine(input.j());
 
 		public static void d<T>(T input) => Console.Write(input);
 		public static void D<T>(IEnumerable<T> input) => Console.Write(input.j());
-
-
-
-
 
 	}
 }
