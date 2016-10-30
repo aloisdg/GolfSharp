@@ -39,7 +39,6 @@ namespace GolfSharp
 		public static void D<T>(IEnumerable<T> input) => Console.Write(input.j());
 
 
-		//public static void c(c input) => Console.WriteLine(input);
 
 
 
