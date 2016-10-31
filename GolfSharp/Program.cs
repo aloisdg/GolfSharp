@@ -19,9 +19,11 @@ namespace GolfSharp
 		{
 			/* put your code here */
 		}
+
+
 		/* constant variables */
-		public static s z = "abcdefghijklmnop";
-		public static s Z = "ABCDEFGHIJKLMNOP";
+		public static s z = "abcdefghijklmnopqrstuvwxyz";
+		public static s Z = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
 		/* String functions */
