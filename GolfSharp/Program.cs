@@ -24,6 +24,10 @@ namespace GolfSharp
 		}
 
 
+
+		
+		
+
 		/* constant variables */
 		public static s z = "abcdefghijklmnopqrstuvwxyz";
 		public static s Z = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -140,7 +144,13 @@ namespace GolfSharp
 		public static IEnumerable<TSource> P<TSource>(this IEnumerable<TSource> input, int count)=>input.Skip(input.Count() - count % input.Count()).Concat(input.Take(input.Count() - count % input.Count()));
 		//move left
 		public static IEnumerable<TSource> p<TSource>(this IEnumerable<TSource> input, int count)=>input.Skip(count % input.Count()).Concat(input.Take(count % input.Count()));
-
+		//contains
+		public static bool I<TSource>(this IEnumerable<TSource> input, TSource elem) => input.Contains(elem);
+		public static bool I(this string input, string elem) => input.Contains(elem);
+		//elementAt
+		public static TSource A<TSource>(this IEnumerable<TSource> input, int index) => input.ElementAt(index);
+		//indexOf
+		public static int O<TSource>(this IEnumerable<TSource> input, TSource elem) => input.ToList().IndexOf(elem);
 
 		/* Output functions */
 		public static void c<T>(T input) => Console.WriteLine(input);
