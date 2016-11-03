@@ -25,8 +25,6 @@ namespace GolfSharp
 
 
 
-		
-		
 
 		/* constant variables */
 		public static s z = "abcdefghijklmnopqrstuvwxyz";
@@ -37,9 +35,9 @@ namespace GolfSharp
 		//char array to string
 		public static string o(this IEnumerable<char> input) => new string(input.ToArray());
 		//object to string
-		public static String t(this object input) => input.ToString();
+		public static string T<TSource>(this TSource input) => input.ToString();
 		//join array with string
-		public static String j<TSource>(this IEnumerable<TSource> input, string seperator = "") => String.Join(seperator, input.s(n => n.t()));
+		public static String j<TSource>(this IEnumerable<TSource> input, string seperator = "") => String.Join(seperator, input.s(n => n.T()));
 		//smart substring
 		public static String R(this string input, int startIndex, int length, string replacement = "")
 		{
@@ -81,7 +79,7 @@ namespace GolfSharp
 		public static IEnumerable<int> r(int start, int count) => Enumerable.Range(start, count);
 		//foreach
 		public static void f<TSource>(IEnumerable<TSource> input, Action<TSource> predicate) => input.ToList().ForEach(predicate);
-		//length
+		//count
 		public static int L<TSource>(this IEnumerable<TSource> input) => input.Count();
 		//split array by length
 		public static TSource[][] S<TSource>(this IEnumerable<TSource> input, int size)
@@ -146,7 +144,7 @@ namespace GolfSharp
 		public static IEnumerable<TSource> p<TSource>(this IEnumerable<TSource> input, int count)=>input.Skip(count % input.Count()).Concat(input.Take(count % input.Count()));
 		//contains
 		public static bool I<TSource>(this IEnumerable<TSource> input, TSource elem) => input.Contains(elem);
-		public static bool I(this string input, string elem) => input.Contains(elem);
+		public static bool I(this string input, object elem) => input.Contains(elem.ToString());
 		//elementAt
 		public static TSource A<TSource>(this IEnumerable<TSource> input, int index) => input.ElementAt(index);
 		//indexOf
