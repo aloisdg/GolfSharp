@@ -20,9 +20,8 @@ namespace GolfSharp
 
 		public static void Main(string[] args)
 		{
-			c(z);
 			/* put your code here */
 
-
+		}
 	}
 }
